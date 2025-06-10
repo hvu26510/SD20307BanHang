@@ -104,7 +104,6 @@ namespace SD20307BanHang
             }
             catch
             {
-
             }
 
             TinhTongTien();
@@ -126,13 +125,19 @@ namespace SD20307BanHang
 
         private void btnTaoMoi_Click(object sender, EventArgs e)
         {
-            HoaDon newHD = new HoaDon();
-            newHD.NgayLap = DateOnly.FromDateTime(DateTime.Now);
-            newHD.TrangThaiThanhToan = false;
-            db.HoaDons.Add(newHD);
-            db.SaveChanges();
-
-            loadHoaDon();
+            if (db.HoaDons.ToList().Count <=20) {
+                HoaDon newHD = new HoaDon();
+                newHD.NgayLap = DateOnly.FromDateTime(DateTime.Now);
+                newHD.TrangThaiThanhToan = false;
+                db.HoaDons.Add(newHD);
+                db.SaveChanges();
+                loadHoaDon();
+            }
+            else
+            {
+                MessageBox.Show("Gioi han 20 hoa don cho");
+            }
+            
         }
     }
 }
