@@ -194,6 +194,7 @@
             dgvSanPham.Name = "dgvSanPham";
             dgvSanPham.Size = new Size(780, 186);
             dgvSanPham.TabIndex = 0;
+            dgvSanPham.CellClick += dgvSanPham_CellClick;
             // 
             // panel4
             // 
@@ -231,6 +232,7 @@
             btnThanhToan.TabIndex = 10;
             btnThanhToan.Text = "Thanh toán";
             btnThanhToan.UseVisualStyleBackColor = true;
+            btnThanhToan.Click += btnThanhToan_Click;
             // 
             // txtSoTienCanTra
             // 
@@ -311,6 +313,7 @@
             cbbNhanVien.Name = "cbbNhanVien";
             cbbNhanVien.Size = new Size(226, 23);
             cbbNhanVien.TabIndex = 1;
+            cbbNhanVien.SelectionChangeCommitted += cbbNhanVien_SelectionChangeCommitted;
             // 
             // cbbKhachHang
             // 
@@ -319,6 +322,7 @@
             cbbKhachHang.Name = "cbbKhachHang";
             cbbKhachHang.Size = new Size(226, 23);
             cbbKhachHang.TabIndex = 0;
+            cbbKhachHang.SelectionChangeCommitted += cbbKhachHang_SelectionChangeCommitted;
             // 
             // Form1
             // 
